@@ -13,6 +13,15 @@ $(document).keypress(function() {
   }
 });
 
+
+$(document).bind('touchstart', function() {
+  if(!started){
+    $("#level-title").text("Level " + level);
+    nextSequence();
+    started = true;
+  }
+});
+
 $("#level-title").click(function(event) {
   if(!started){
     $("#level-title").text("Level " + level);
